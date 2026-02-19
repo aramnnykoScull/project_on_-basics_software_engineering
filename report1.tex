@@ -1,0 +1,226 @@
+\documentclass[14pt,a4paper]{extarticle}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{caption} % Для настройки подписей
+
+% Настройки по ГОСТ
+\geometry{left=30mm, right=15mm, top=20mm, bottom=20mm}
+\onehalfspacing
+\parindent=1.25cm
+
+% Используем шрифт Times New Roman
+\usepackage{mathptmx}
+
+% Настройка стилей заголовков по ГОСТ
+\titleformat{\section}{\normalfont\bfseries\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries\raggedright}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\raggedright}{\thesubsubsection}{1em}{}
+
+% Настройка для листингов - подписи снизу
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=true,
+    showspaces=false,
+    showstringspaces=false,
+    captionpos=b, % Подпись снизу
+    inputencoding=utf8,
+    extendedchars=true,
+    keepspaces=true,
+    literate={а}{{\selectfont\char224}}1
+             {б}{{\selectfont\char225}}1
+             {в}{{\selectfont\char226}}1
+             {г}{{\selectfont\char227}}1
+             {д}{{\selectfont\char228}}1
+             {е}{{\selectfont\char229}}1
+             {ё}{{\"e}}1
+             {ж}{{\selectfont\char230}}1
+             {з}{{\selectfont\char231}}1
+             {и}{{\selectfont\char232}}1
+             {й}{{\selectfont\char233}}1
+             {к}{{\selectfont\char234}}1
+             {л}{{\selectfont\char235}}1
+             {м}{{\selectfont\char236}}1
+             {н}{{\selectfont\char237}}1
+             {о}{{\selectfont\char238}}1
+             {п}{{\selectfont\char239}}1
+             {р}{{\selectfont\char240}}1
+             {с}{{\selectfont\char241}}1
+             {т}{{\selectfont\char242}}1
+             {у}{{\selectfont\char243}}1
+             {ф}{{\selectfont\char244}}1
+             {х}{{\selectfont\char245}}1
+             {ц}{{\selectfont\char246}}1
+             {ч}{{\selectfont\char247}}1
+             {ш}{{\selectfont\char248}}1
+             {щ}{{\selectfont\char249}}1
+             {ъ}{{\selectfont\char250}}1
+             {ы}{{\selectfont\char251}}1
+             {ь}{{\selectfont\char252}}1
+             {э}{{\selectfont\char253}}1
+             {ю}{{\selectfont\char254}}1
+             {я}{{\selectfont\char255}}1
+             {А}{{\selectfont\char192}}1
+             {Б}{{\selectfont\char193}}1
+             {В}{{\selectfont\char194}}1
+             {Г}{{\selectfont\char195}}1
+             {Д}{{\selectfont\char196}}1
+             {Е}{{\selectfont\char197}}1
+             {Ё}{{\"E}}1
+             {Ж}{{\selectfont\char198}}1
+             {З}{{\selectfont\char199}}1
+             {И}{{\selectfont\char200}}1
+             {Й}{{\selectfont\char201}}1
+             {К}{{\selectfont\char202}}1
+             {Л}{{\selectfont\char203}}1
+             {М}{{\selectfont\char204}}1
+             {Н}{{\selectfont\char205}}1
+             {О}{{\selectfont\char206}}1
+             {П}{{\selectfont\char207}}1
+             {Р}{{\selectfont\char208}}1
+             {С}{{\selectfont\char209}}1
+             {Т}{{\selectfont\char210}}1
+             {У}{{\selectfont\char211}}1
+             {Ф}{{\selectfont\char212}}1
+             {Х}{{\selectfont\char213}}1
+             {Ц}{{\selectfont\char214}}1
+             {Ч}{{\selectfont\char215}}1
+             {Ш}{{\selectfont\char216}}1
+             {Щ}{{\selectfont\char217}}1
+             {Ъ}{{\selectfont\char218}}1
+             {Ы}{{\selectfont\char219}}1
+             {Ь}{{\selectfont\char220}}1
+             {Э}{{\selectfont\char221}}1
+             {Ю}{{\selectfont\char222}}1
+             {Я}{{\selectfont\char223}}1
+             {«}{{\guillemotleft}}1
+             {»}{{\guillemotright}}1
+             {№}{{\No}}1,
+}
+
+% Настройка нумерации листингов
+\renewcommand{\lstlistingname}{Листинг}
+\renewcommand{\lstlistlistingname}{Список листингов}
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+
+\subsection*{Цель работы:}
+
+\subsection*{Задание:}
+\begin{enumerate}[label=\arabic*)]
+    \item 
+    \item 
+    \item 
+\end{enumerate}
+
+\section*{Ход работы}
+
+\subsection*{Теоретическая информация}
+
+\subsection*{Подзадание №1}
+
+Код программы представлен ниже (Листинги \ref{lst:point1}, \ref{lst:point_all_h} и \ref{lst:point_all_cpp}, рис. \ref{fig:square}).
+
+\begin{lstlisting}[caption={Код программы для вычисления площади квадрата}, label=lst:point1]
+#include "point_all.h"
+
+int main() {
+    int side;
+    if (!read_int("Введите сторону квадрата: ", side))
+        return 1;
+
+    cout << "Площадь квадрата: " << side * side << endl;
+    return 0;
+}
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth, height=0.5\textheight, keepaspectratio]{media/image1.png}
+\caption{Пример выполнения программы для вычисления площади квадрата}
+\label{fig:square}
+\end{figure}
+
+\subsection*{Подзадание №2}
+
+Код программы представлен ниже (Листинги \ref{lst:point2}, \ref{lst:point_all_h} и \ref{lst:point_all_cpp}, рис. \ref{fig:volume}).
+
+\begin{lstlisting}[caption={Код программы для вычисления объема прямоугольного параллелепипеда}, label=lst:point2]
+#include "point_all.h"
+
+int main() {
+    int side_a, side_b, side_h;
+    cout << "Для подсчета объема введите три стороны:" << endl;
+    
+    if (!read_int("Введите сторону a (длина): ", side_a) ||
+        !read_int("Введите сторону b (ширина): ", side_b) ||
+        !read_int("Введите сторону h (высота): ", side_h))
+        return 1;
+    
+    cout << "Объем: " << side_a * side_b * side_h << endl;
+    return 0;
+}
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth, height=0.7\textheight, keepaspectratio]{media/image2.png}
+\caption{Пример выполнения программы для вычисления объема}
+\label{fig:volume}
+\end{figure}
+
+\subsection*{Подзадание №3}
+
+Код программы представлен ниже (Листинги \ref{lst:point3}, \ref{lst:point_all_h} и \ref{lst:point_all_cpp}, рис. \ref{fig:distance}).
+
+\begin{lstlisting}[caption={Код программы для вычисления пройденного расстояния}, label=lst:point3]
+
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{media/image3.png}
+\caption{Пример выполнения программы для вычисления расстояния}
+\label{fig:distance}
+\end{figure}
+
+\subsection*{Вспомогательные файлы}
+Для всех программ использован общий заголовочный файл и функция для чтения и проверки положительного числа.
+
+\begin{lstlisting}[caption={Заголовочный файл point\_all.h}, label=lst:point_all_h]
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Файл реализации point\_all.cpp}, label=lst:point_all_cpp]
+
+\end{lstlisting}
+
+\section*{Вывод}
+
+\end{document}
